@@ -1,6 +1,38 @@
 
+//----------------------------------------------------
+// / Import
+//----------------------------------------------------
 //YUI-buttons
-@import "@yui-buttons/src/scss/buttons";
+@import "~yui-buttons/src/scss/buttons";
+@import "~yui-flex/src/scss/flex";
+
+//----------------------------------------------------
+// / setting class
+//----------------------------------------------------
+
+// / button class
+//----------------------------------------------------
+
+$brandName:'yui';
+.#{$brandName}-btn-floating{
+  @extend %ex-btn;
+  @extend %ex-btn-floating;
+}
+.#{$brandName}-btn-plain{
+  @extend %ex-btn;
+  @extend %ex-btn-plain;
+}
+.#{$brandName}-btn-melt{
+  @extend %ex-btn;
+  @extend %ex-btn-melt;
+}
+.#{$brandName}-btn-outline{
+  @extend %ex-btn;
+  @extend %ex-btn-outline;
+}
+
+
+
 
 
 

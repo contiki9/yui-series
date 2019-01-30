@@ -16,6 +16,27 @@ npm install musubii
 npx gulp watch
 ```
 
+### Browser
+
+日本で多く使われているブラウザを基準にバグフィックスを行なっています。
+
+- Chrome
+    - Newest
+- Firefox	
+    - Newest
+- IE
+    - 11~
+- Ege
+    - Newest
+- Safari(Mac)
+
+- Safari(iOS)
+    - Newest
+- Chrome(Android)
+    - Newest
+- Browser(Android)
+    - 4.4~
+	
 ### Develop
 
 - MacBook Pro
@@ -24,8 +45,8 @@ npx gulp watch
 
 ### License
 
-MIT
+- MIT
 
 ### Credit
 
-- Author: Conti
+- Author: conti

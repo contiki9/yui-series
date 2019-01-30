@@ -13,6 +13,7 @@ const sass = require('gulp-sass');
 const sassGlob = require("gulp-sass-glob");
 const pleeease = require('gulp-pleeease');
 const plumber = require('gulp-plumber');
+const packageImporter = require('node-sass-package-importer');
 
 //browserSync
 const browserSync = require('browser-sync');
@@ -49,7 +50,7 @@ const browserSyncOptions = {
     //proxy: "localhost/wordpress/",
     notify: false,
     server: {
-        baseDir: release.root,
+        baseDir: './docs/',
         index: 'index.html'
     },
     open:false//オプション
@@ -81,7 +82,11 @@ gulp.task('sass', function () {
                 this.emit('end');
             }
         }))
-        .pipe(sass())
+        .pipe(sass({
+            importer: packageImporter({
+                extensions: ['.scss', '.css']
+            })
+        }))
         .pipe(pleeease({
             autoprefixer: {"browsers": AUTOPREFIXER_BROWSERS},
             minifier: true,
@@ -100,12 +105,6 @@ gulp.task('reload', function (done) {
     browserSync.reload();
     done();
 });
-
-
-/// watch
-// gulp.task('watch',gulp.series( gulp.parallel('browser-sync')), function(){
-//     gulp.watch(develop.assets +'scss/*.scss', gulp.task('sass','reload'));
-// });
 
 gulp.task('watch', gulp.series( 'browser-sync', function() {
     gulp.watch(develop.assets +'scss/*.scss', gulp.task('sass'));

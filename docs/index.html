@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja" >
+<head>
+    <meta charset="UTF-8">
+    <title>YUI-SERIES</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/yui-series.css">
+    <style>
+        body,html{
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+<section class="hero is-primary">
+    <div class="hero-body">
+        <div class="columns">
+            <div class="column is-12">
+                <div class="container content">
+                    <h1 class="title">YUI-SERIES</h1>
+                    <p class="subtitle">あなたがよく使う命名規則に合わせてカスタマイズできるミニマムなCSSフレームワーク。それがYUI-SERIESです</p>
+                    <a href="https://github.com/contiki9/yui-series" target="_blank" class="btn-plain"><span class="icon"><i class="fab fa-github"></i></span><span>Github</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-3">
+                <aside class="is-medium menu">
+                    <p class="menu-label">UI Document</p>
+                    <ul class="menu-list">
+                        <li><a href="#todo" class="is-active">Style Guide</a></li>
+                    </ul>
+                    <p class="menu-label">YUi-Components</p>
+                    <ul class="menu-list">
+                        <li><a class="tag is-white is-medium" href="#todo">button</a></li>
+                    </ul>
+                </aside>
+            </div>
+            <div class="column is-9">
+                <div class="content is-medium">
+                    <h3 class="title is-3">概要</h3>
+                    <p><code>YUI-SERIES</code>は各YUi-COMPONENTS達を<code>extend</code>で統合して、単体で使えるようにしたフレームワークです。</p>
+                    <p>名前の由来はこちらです</p>
+                    <article class="message is-primary">
+                        <div class="message-body">
+                                Y = よくある <br>
+                                U = ユーザー <br>
+                                I = インターフェイス <br>
+                        </div>
+                    </article>
+                </div>
+                <hr class="space">
+                <div class="content is-medium">
+                    <h3 class="title is-3">YUi-COMPONENTSについて</h3>
+                    <p>YUI-COMPONENTSは単体で動くCSSではありません。 SCSSで作られていて、全てextendで作られています。</p>
+                    <p>現在公開されているCOMPONENTSはサイドバーにあるもので確認できます。</p>
+                </div>
+                <hr class="space">
+                <div class="content is-medium">
+                    <h3 class="title is-3">使い方</h3>
+                    <pre><code class="language-javascript">npm i</code></pre>
+                    <p>その後 <code>src/assets/scss/yui-series.scss</code>をあなたが使うscssにimportで読み込ませるようにすれば設定完了です。</p>
+                </div>
+                <hr class="space">
+                <div class="content is-medium">
+                    <h3 class="title is-3">カスタマイズ</h3>
+                    <h4 class="title is-4">ブランドネーム（接頭語）の変更</h4>
+                    <p>YUI-SERIESは予めブランドネームを変更できるようにしています。<br>デフォルト時には <code>yui</code>をつけていますが <code>$brandName</code>を変更すればあなたの好きなブランドネームを使えます。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="columns is-mobile is-centered">
+        <div class="field is-grouped is-grouped-multiline">
+            <div class="control">
+                <div class="tags has-addons"><a class="tag is-link" href="https://github.com/dansup/bulma-templates">YUI-SERIES</a>
+                    <span class="tag is-info">MIT license</span>
+                </div>
+            </div>
+            <div class="control">
+                <div class="tags has-addons">
+                    <span class="tag is-dark">Creator</span>
+                    <span class="tag has-addons is-warning"><a href="https://twitter.com/maki_saki" target="_blank">conti</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.js'></script>
+<script>
+    window.addEventListener('resize', () => {
+        const divs = document.querySelectorAll(".menu-list");
+        if (window.innerWidth < 768){
+            divs.forEach(div => div.classList.add("tags"));
+        }
+        else {
+            divs.forEach(div => div.classList.remove("tags"));
+        }
+    });
+</script>
+</body>
