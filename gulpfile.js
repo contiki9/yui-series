@@ -31,9 +31,9 @@ var develop = {
 
 //コンパイル先
 var release = {
-    'root': './dist/',
-    'css': './dist/assets/css/',
-    'assets': './dist/assets/'
+    'root': './docs/',
+    'css': './docs/assets/css/',
+    'assets': './docs/assets/'
 };
 
 
