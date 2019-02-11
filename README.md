@@ -5,7 +5,7 @@
 
 インストール
 ```
-npm install musubii
+npm i
 ```
 
 ### gulp 
