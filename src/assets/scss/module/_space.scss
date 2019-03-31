@@ -6,6 +6,9 @@
 //----------------------------------------------------
 
 %ex-margin {
+  &.is-margin-reset {
+        margin: 0;
+    }
   @each $way in $pattern-space {
     @if $way == "all" {
       @each $key, $value in $pattern-margin-size {
@@ -72,6 +75,9 @@
   //----------------------------------------------------
 
 %ex-padding{
+  &.is-padding-reset {
+    padding: 0;
+  }
   @each $way in $pattern-space {
     @if $way == "all" {
       @each $key, $value in $pattern-margin-size {
@@ -132,22 +138,3 @@
     }
   }
 }
-
-//%ex-clear{
-//  //----------------------------------------------------
-//  // / clear
-//  //----------------------------------------------------
-//  &.is-reset {
-//    margin: 0;
-//  }
-//  &.is-centering {
-//    margin: 0 auto;
-//  }
-//  &.is-margin-right-auto {
-//    margin-right: auto;
-//  }
-//  &.is-margin-left-auto {
-//    margin-left: auto;
-//  }
-//}
-
