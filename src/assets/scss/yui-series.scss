@@ -2,9 +2,14 @@
 //----------------------------------------------------
 // / Import
 //----------------------------------------------------
-//YUI-buttons
-@import "~yui-buttons/src/scss/buttons";
-@import "~yui-flex/src/scss/flex";
+@import "config/colors";
+@import "config/variable";
+@import "config/mixin";
+@import "config/extend";
+
+//module
+@import "module/button";
+@import "module/flex";
 
 //----------------------------------------------------
 // / setting class
@@ -14,6 +19,12 @@
 //----------------------------------------------------
 
 $brandName:'yui';
+
+
+.#{$brandName}-btn{
+  @extend %ex-btn;
+  @extend %ex-btn-floating;
+}
 .#{$brandName}-btn-floating{
   @extend %ex-btn;
   @extend %ex-btn-floating;

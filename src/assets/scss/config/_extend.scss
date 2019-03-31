@@ -1,0 +1,48 @@
+//----------------------------------------------------
+// / COLOR PATTERN
+//----------------------------------------------------
+
+%ex-color-pattern{
+  //----------------------------------------------------
+  // / Dark Text
+  //----------------------------------------------------
+
+  @each $key, $value in $pattern-color-dark {
+    .is-#{$key},.op-#{$key} {
+      color: $value;
+    }
+    .is-#{$key},.op-#{$key} {
+      background-color: $value;
+    }
+  }
+
+  //----------------------------------------------------
+  // / Light Text
+  //----------------------------------------------------
+
+  @each $key, $value in $pattern-color-light {
+    .is-#{$key},.op-#{$key} {
+      color: $value;
+    }
+    .is-#{$key},.op-#{$key} {
+      background-color: $value;
+    }
+
+  }
+
+  //----------------------------------------------------
+  // / Theme Color Text
+  //----------------------------------------------------
+
+  @each $key, $value in $pattern-color-theme {
+    .is-#{$key},.op-#{$key} {
+      color: $value;
+    }
+    .is-#{$key},.op-#{$key} {
+      background-color: $value;
+    }
+  }
+}
+
+
+

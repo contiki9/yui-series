@@ -1,0 +1,97 @@
+//----------------------------------------------------
+// / Basic Modifier
+//----------------------------------------------------
+
+
+%ex-yui-flex{
+  @include flx-row;
+  &.op-flx-row-reverse{
+    @include flx-row-reverse;
+  }
+  &.op-flx-start{
+    @include flx-start;
+  }
+  &.op-flx-center{
+    @include flx-center;
+  }
+  &.op-flx-end{
+    @include flx-end;
+  }
+  &.op-flx-top{
+    @include flx-top;
+  }
+  &.op-flx-middle{
+    @include flx-middle;
+  }
+  &.op-flx-bottom{
+    @include flx-bottom;
+  }
+  &.op-flx-around{
+    @include flx-around;
+  }
+  &.op-flx-between{
+    @include flx-between;
+  }
+  > .l-flx-col-1{
+    @include flx-col-1;
+  }
+  > .l-flx-col-2{
+    @include flx-col-2;
+  }
+  > .l-flx-col-3{
+    @include flx-col-3;
+  }
+  > .l-flx-col-4{
+    @include flx-col-4;
+  }
+  > .l-flx-col-5{
+    @include flx-col-5;
+  }
+  > .l-flx-col-6{
+    @include flx-col-6;
+  }
+  > .l-flx-col-7{
+    @include flx-col-7;
+  }
+  > .l-flx-col-8{
+    @include flx-col-8;
+  }
+  > .l-flx-col-9{
+    @include flx-col-9;
+  }
+  > .l-flx-col-10{
+    @include flx-col-10;
+  }
+  > .l-flx-col-11{
+    @include flx-col-11;
+  }
+  > .l-flx-col-12{
+    @include flx-col-12;
+  }
+  > .l-box{
+    @include flx-col;
+    margin-right: 8*2px;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  > .l-flx-col{
+    @include flx-col;
+  }
+  > .l-left{
+    &.op-auto{
+      @include flx-col;
+      margin-right: auto;
+    }
+  }
+  > .l-center{
+
+  }
+  > .l-right{
+    &.op-auto{
+      @include flx-col;
+      margin-left: auto;
+    }
+  }
+}
+

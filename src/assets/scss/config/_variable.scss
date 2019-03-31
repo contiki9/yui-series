@@ -1,0 +1,11 @@
+//----------------------------------------------------
+// / Config - Button Color
+//----------------------------------------------------
+//breakpointサイズ
+//breakpointが１つしかない場合’brk’を使用しています。
+$breakpoints: (
+        'brk': 'screen and (max-width: 768px)',
+        'sp': 'screen and (max-width: 400px)',
+        'tb': 'screen and (max-width: 768px)',
+        'pc': 'screen and (min-width: 769px)',
+) !default;

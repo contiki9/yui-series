@@ -1,0 +1,351 @@
+//----------------------------------------------------
+// buttons
+//----------------------------------------------------
+
+
+//----------------------------------------------------
+// / Config - Button Color
+//----------------------------------------------------
+
+$body-text-color:$dark-2 !default;
+
+// .btns > .btn
+$btns-gap-default: 0.5em !default;
+
+// .btn
+$btn-padding: 0.5em 1em !default;
+$btn-border-width: 1px !default;
+$btn-border-radius: 0.1875em !default;
+$btn-line-height: 1.5 !default;
+$btn-transition: ease-out 0.12s !default;
+
+// .btn.is-round
+$btn-round-border-radius: 999em !default;
+
+// .btn.is-circle
+$btn-circle-width: calc(2.5em + 1px * 2) !default;
+$btn-circle-height: calc(2.5em + 1px * 2) !default;
+$btn-circle-border-radius: 999em !default;
+
+// .btn.is-floating
+$btn-floating-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.24) !default;
+$btn-floating-hover-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.24) !default;
+
+// .btn.is-plain
+$btn-plain-default-background-color: #000 !default;
+$btn-plain-default-hover-background-color: darken($grey-100, 5%) !default;
+
+// .btn.is-melt
+$btn-melt-default-hover-background-color: $dark-9 !default;
+
+// .btn.is-outline
+$btn-outline-default-background-color: $light !default;
+$btn-outline-default-hover-background-color: darken($light, 5%) !default;
+$btn-outline-default-border-color: $dark-7 !default;
+
+// .btn.is-ghost
+$btn-ghost-default-border-color: $light !default;
+$btn-ghost-default-text-color: $light !default;
+$btn-ghost-default-hover-background-color: $light !default;
+$btn-ghost-default-hover-text-color: $dark-2 !default;
+
+// .btn.is-disable
+$btn-disable-background-color: $grey-400 !default;
+$btn-disable-background-color-alpha: $dark-6 !default;
+$btn-disable-text-color: $dark-6 !default;
+
+// .btn.is-ghost.is-disable
+$btn-ghost-disable-background-color: $light-8 !default;
+$btn-ghost-disable-border-color: $light-4 !default;
+$btn-ghost-disable-text-color: $light-4 !default;
+
+
+
+
+//----------------------------------------------------
+// / Set Bar
+//----------------------------------------------------
+
+%ex-btn-nav-bar{
+  &.is-nav-bar {
+    flex-wrap: nowrap;
+    > .btn {
+      border-radius: 0;
+      overflow: hidden;
+    }
+    > .btn:not(.is-round):first-child {
+      border-top-left-radius: $btn-border-radius;
+      border-bottom-left-radius: $btn-border-radius;
+    }
+    > .btn:not(.is-round):last-child {
+      border-top-right-radius: $btn-border-radius;
+      border-bottom-right-radius: $btn-border-radius;
+    }
+    > .btn.is-round:first-child {
+      border-top-left-radius: $btn-round-border-radius;
+      border-bottom-left-radius: $btn-round-border-radius;
+    }
+    > .btn.is-round:last-child {
+      border-top-right-radius: $btn-round-border-radius;
+      border-bottom-right-radius: $btn-round-border-radius;
+    }
+    > .btn:nth-child(2),
+    > .btn:nth-child(2) ~ .btn {
+      border-left: none;
+    }
+  }
+}
+
+
+//----------------------------------------------------
+// / Single Modifier
+//----------------------------------------------------
+%ex-btn-option{
+  @each $key, $value in $pattern-color-theme {
+    &.is-#{$key},&.op-#{$key} {
+      background-color: $value;
+      color: $light;
+      &:hover {
+        background-color: darken($value, 5%);
+      }
+    }
+  }
+  @each $key, $value in $pattern-color-social {
+    &.is-#{$key},&.op-#{$key} {
+      background-color: $value;
+      color: $light;
+      &:hover {
+        background-color: darken($value, 5%);
+      }
+    }
+  }
+  &.is-disable,
+  &[disabled] {
+    cursor: default;
+  }
+  //shape 形
+  &.is-round-none {
+    border-radius: 0;
+  }
+  &.is-round {
+    border-radius: $btn-round-border-radius;
+  }
+  &.is-circle {
+    position: relative;
+    width: $btn-circle-width;
+    height: $btn-circle-height;
+    padding: 0;
+    border-radius: $btn-circle-border-radius;
+    line-height: 1;
+  }
+  &.is-icon-round {
+    position: relative;
+    width: $btn-circle-width;
+    height: $btn-circle-height;
+    padding: 0;
+    border-radius: $btn-border-radius;
+    line-height: 1;
+  }
+  &.is-side-up {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  //size 大きさ
+  &.is-xxs{
+    font-size: .6rem;
+  }
+  &.is-xs{
+    font-size: .75rem;
+  }
+  &.is-sm{
+    font-size: .9rem;
+  }
+  &.is-md{
+    font-size: 1rem;
+  }
+  &.is-lg{
+    font-size: 1.3rem;
+  }
+  &.is-xl{
+    font-size: 1.5rem;
+  }
+  &.is-xxl{
+    font-size: 1.8rem;
+  }
+
+  //Gradation グラデ系
+  &.is-grd1{
+    @extend %ex-btn-hover-anime.is-brightness-light;
+    color: #4842bd;
+    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+  }
+  &.is-grd2{
+    @extend %ex-btn-hover-anime.is-brightness-light;
+    color: rgba($white,.9);
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+  }
+  &.is-grd3{
+    @extend %ex-btn-hover-anime.is-brightness-light;
+    color: rgba($white,.8);
+    background-image: linear-gradient(to top, #4facfe 0%, #00f2fe 100%);
+  }
+  &.is-grd4{
+    @extend %ex-btn-hover-anime.is-brightness-light;
+    color: rgba($white,.8);
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  &.is-grd5{
+    @extend %ex-btn-hover-anime.is-brightness-light;
+    color: rgba($black,.6);
+    background-image: linear-gradient(90deg, #fff1eb 0%, #ace0f9 100%);
+  }
+}
+%ex-btn-hover-anime{
+  &.is-opacity{
+    &:hover{
+      transition: all .5s;
+      opacity: .7;
+    }
+  }
+  &.is-brightness-light{
+    &:hover {
+      filter: brightness(1.1);
+      transition: all .5s;
+    }
+  }
+  &.is-brightness-dark{
+    &:hover {
+      filter: brightness(.9);
+      transition: all .5s;
+    }
+  }
+}
+
+%ex-btn {
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+  white-space: nowrap;
+  padding: $btn-padding;
+  border-radius: $btn-border-radius;
+  line-height: $btn-line-height;
+  text-align: center;
+  transition: $btn-transition;
+  font-size: 1rem;
+  margin: 0;
+  height: auto;
+  width: auto;
+  &[type="button"],
+  &[type="reset"],
+  &[type="submit"] {
+    color: $body-text-color;
+  }
+  @extend %ex-btn-option;
+}
+
+.btn{
+  @extend %ex-btn;
+}
+
+//----------------------------------------------------
+// / Floating
+//----------------------------------------------------
+
+%ex-btn-floating {
+  &:not(.is-disable){
+    box-shadow: $btn-floating-shadow;
+    &:hover {
+      box-shadow: $btn-floating-hover-shadow;
+    }
+  }
+}
+
+//----------------------------------------------------
+// / Plain
+//----------------------------------------------------
+
+%ex-btn-plain {
+  background-color: $btn-plain-default-background-color;
+  border: $btn-border-width solid transparent;
+  &:hover {
+    background-color: $btn-plain-default-hover-background-color;
+  }
+  @each $key, $value in $pattern-color-theme {
+    &.is-#{$key},&.op-#{$key} {
+      background-color: $value;
+      color: $light;
+      &:hover {
+        background-color: darken($value, 5%);
+      }
+    }
+  }
+  &.is-disable,
+  &.is-disable:hover,
+  &[disabled],
+  &[disabled]:hover {
+    background-color: $btn-disable-background-color;
+    color: $btn-disable-text-color;
+  }
+}
+
+//----------------------------------------------------
+// / Melt
+//----------------------------------------------------
+
+%ex-btn-melt {
+  background-color: transparent;
+  border: $btn-border-width solid transparent;
+  &:hover {
+    background-color: $btn-melt-default-hover-background-color;
+  }
+  @each $key, $value in $pattern-color-theme {
+    &.is-#{$key},&.op-#{$key} {
+      background-color: transparent;
+      color: $value;
+      &:hover{
+        color: #FFF;
+      }
+    }
+  }
+  &.is-disable,
+  &.is-disable:hover,
+  &[disabled],
+  &[disabled]:hover {
+    color: $btn-disable-text-color;
+    background-color: transparent;
+  }
+}
+
+//----------------------------------------------------
+// / Outline
+//----------------------------------------------------
+
+%ex-btn-outline {
+  background-color: $btn-outline-default-background-color;
+  border: $btn-border-width solid $btn-outline-default-border-color;
+  &:hover {
+    background-color: $btn-outline-default-hover-background-color;
+  }
+  @each $key, $value in $pattern-color-theme {
+    &.is-#{$key},&.op-#{$key} {
+      background-color: transparent;
+      border-color: $value;
+      color: $value;
+      &:hover {
+        background-color: $value;
+        border-color: transparent;
+        color: $light;
+      }
+    }
+  }
+  &.is-disable,
+  &.is-disable:hover,
+  &[disabled],
+  &[disabled]:hover {
+    background-color: $btn-disable-background-color-alpha;
+    color: $btn-disable-text-color;
+  }
+}
