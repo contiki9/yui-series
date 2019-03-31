@@ -30,6 +30,10 @@ $brandName:'yui';
   @extend %ex-btn;
   @extend %ex-btn-outline;
 }
+.#{$brandName}-btn-ghost{
+  @extend %ex-btn;
+  @extend %ex-btn-outline;
+}
 
 
 
