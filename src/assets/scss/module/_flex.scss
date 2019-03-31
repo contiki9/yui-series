@@ -88,7 +88,6 @@
   }
   > .l-right{
     &.op-auto{
-      @include flx-col;
       margin-left: auto;
     }
   }
