@@ -131,13 +131,17 @@ $pattern-margin-size: (
         sm: $margin-size-sm,
         xs: $margin-size-xs,
         xxs: $margin-size-xxs,
-        value7: $margin-size-xxl,
-        value6: $margin-size-xl,
-        value5: $margin-size-lg,
-        value4: $margin-size-md,
-        value3: $margin-size-sm,
-        value2: $margin-size-xs,
-        value1: $margin-size-xxs
+        80: 8*10px,
+        72: 8*9px,
+        64: 8*8px,
+        56: 8*7px,
+        48: 8*6px,
+        40: 8*5px,
+        32: 8*4px,
+        24: 8*3px,
+        16: 8*2px,
+        8: 8px,
+        4: 4px
 ) !default;
 
 //----------------------------------------------------
@@ -162,13 +166,17 @@ $pattern-padding-size: (
         sm: $padding-size-sm,
         xs: $padding-size-xs,
         xxs: $padding-size-xxs,
-        value7: $margin-size-xxl,
-        value6: $margin-size-xl,
-        value5: $margin-size-lg,
-        value4: $margin-size-md,
-        value3: $margin-size-sm,
-        value2: $margin-size-xs,
-        value1: $margin-size-xxs
+        80: 8*10px,
+        72: 8*9px,
+        64: 8*8px,
+        56: 8*7px,
+        48: 8*6px,
+        40: 8*5px,
+        32: 8*4px,
+        24: 8*3px,
+        16: 8*2px,
+        8: 8px,
+        4: 4px
 ) !default;
 
 // Pattern - Way
