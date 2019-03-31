@@ -31,6 +31,7 @@ $brandName:'yui';
 .#{$brandName}-btn-plain{
   @extend %ex-btn;
   @extend %ex-btn-plain;
+  color: #FFF;
 }
 .#{$brandName}-btn-melt{
   @extend %ex-btn;
