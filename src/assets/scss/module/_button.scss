@@ -90,6 +90,10 @@
     padding-left: 2em;
     padding-right: 2em;
   }
+  &.is-block {
+    display: block;
+    width: 100%;
+  }
   //size 大きさ
   &.is-xxs{
     font-size: .6rem;
