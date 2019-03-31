@@ -113,52 +113,32 @@
     font-size: 1.8rem;
   }
 
-  //Gradation グラデ系
-  &.is-grd1{
-    @extend %ex-btn-hover-anime.is-brightness-light;
-    color: #4842bd;
-    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
-  }
-  &.is-grd2{
-    @extend %ex-btn-hover-anime.is-brightness-light;
-    color: rgba($white,.9);
-    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
-  }
-  &.is-grd3{
-    @extend %ex-btn-hover-anime.is-brightness-light;
-    color: rgba($white,.8);
-    background-image: linear-gradient(to top, #4facfe 0%, #00f2fe 100%);
-  }
-  &.is-grd4{
-    @extend %ex-btn-hover-anime.is-brightness-light;
-    color: rgba($white,.8);
-    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  }
-  &.is-grd5{
-    @extend %ex-btn-hover-anime.is-brightness-light;
-    color: rgba($black,.6);
-    background-image: linear-gradient(90deg, #fff1eb 0%, #ace0f9 100%);
-  }
-}
-%ex-btn-hover-anime{
-  &.is-opacity{
-    &:hover{
-      transition: all .5s;
-      opacity: .7;
-    }
-  }
-  &.is-brightness-light{
-    &:hover {
-      filter: brightness(1.1);
-      transition: all .5s;
-    }
-  }
-  &.is-brightness-dark{
-    &:hover {
-      filter: brightness(.9);
-      transition: all .5s;
-    }
-  }
+  ////Gradation グラデ系
+  //&.is-grd1{
+  //  @extend %ex-hover-anime.is-brightness-light;
+  //  color: #4842bd;
+  //  background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+  //}
+  //&.is-grd2{
+  //  @extend %ex-hover-anime.is-brightness-light;
+  //  color: rgba($white,.9);
+  //  background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+  //}
+  //&.is-grd3{
+  //  @extend %ex-hover-anime.is-brightness-light;
+  //  color: rgba($white,.8);
+  //  background-image: linear-gradient(to top, #4facfe 0%, #00f2fe 100%);
+  //}
+  //&.is-grd4{
+  //  @extend %ex-hover-anime.is-brightness-light;
+  //  color: rgba($white,.8);
+  //  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  //}
+  //&.is-grd5{
+  //  @extend %ex-hover-anime.is-brightness-light;
+  //  color: rgba($black,.6);
+  //  background-image: linear-gradient(90deg, #fff1eb 0%, #ace0f9 100%);
+  //}
 }
 
 %ex-btn {

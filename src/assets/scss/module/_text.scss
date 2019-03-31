@@ -1,0 +1,14 @@
+//----------------------------------------------------
+// / Text Size
+//----------------------------------------------------
+
+%ex-text-size {
+  @each $key, $value in $pattern-text-size {
+    &.is-size-#{$key},&.op-size-#{$key} {
+      font-size: $value;
+    }
+  }
+}
+
+
+

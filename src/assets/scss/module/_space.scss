@@ -1,0 +1,153 @@
+//----------------------------------------------------
+// Space
+//----------------------------------------------------
+//----------------------------------------------------
+// / Add Margin
+//----------------------------------------------------
+
+%ex-margin {
+  @each $way in $pattern-space {
+    @if $way == "all" {
+      @each $key, $value in $pattern-margin-size {
+        @if $key == "md" {
+          &.is-margin, &.op-margin,
+          &.is-margin-#{$key}, &.op-margin-#{$key} {
+            margin: $value;
+          }
+        } @else {
+          &.is-margin-#{$key}, &.op-margin-#{$key} {
+            margin: $value;
+          }
+        }
+      }
+    } @else if $way == "vertical" {
+      @each $key, $value in $pattern-margin-size {
+        @if $key == "md" {
+          &.is-margin-v, &.op-margin-v,
+          &.is-margin-v-#{$key}, &.op-margin-v-#{$key} {
+            margin-top: $value;
+            margin-bottom: $value;
+          }
+        }@else {
+          &.is-margin-v-#{$key}, &.op-margin-v-#{$key} {
+            margin-top: $value;
+            margin-bottom: $value;
+          }
+        }
+      }
+    } @else if $way == "side" {
+      @each $key, $value in $pattern-margin-size {
+        @if $key == "md" {
+          &.is-margin-s, &.op-margin-s,
+          &.is-margin-s-#{$key}, &.op-margin-s-#{$key} {
+            margin-left: $value;
+            margin-right: $value;
+          }
+        }@else {
+          &.is-margin-s-#{$key}, &.op-margin-s-#{$key} {
+            margin-left: $value;
+            margin-right: $value;
+          }
+        }
+      }
+    } @else {
+      @each $key, $value in $pattern-margin-size {
+        @if $key == "md" {
+          &.is-margin-#{$way}, &.op-margin-#{$way},
+          &.is-margin-#{$way}-#{$key}, &.op-margin-#{$way}-#{$key} {
+            margin-#{$way}: $value;
+          }
+        } @else {
+          &.is-margin-#{$way}-#{$key}, &.op-margin-#{$way}-#{$key} {
+            margin-#{$way}: $value;
+          }
+        }
+      }
+    }
+  }
+}
+
+  //----------------------------------------------------
+  // / Add padding
+  //----------------------------------------------------
+
+%ex-padding{
+  @each $way in $pattern-space {
+    @if $way == "all" {
+      @each $key, $value in $pattern-margin-size {
+        @if $key == "md" {
+          &.is-padding,&.op-padding,
+          &.is-padding-#{$key},&.op-padding-#{$key} {
+            padding: $value;
+          }
+        } @else {
+          &.is-padding-#{$key},&.op-padding-#{$key}  {
+            padding: $value;
+          }
+        }
+      }
+    }@else if $way == "vertical" {
+      @each $key, $value in $pattern-margin-size {
+        @if $key == "md" {
+          &.is-padding-v, &.op-padding-v,
+          &.is-padding-v-#{$key}, &.op-padding-v-#{$key} {
+            padding-top: $value;
+            padding-bottom: $value;
+          }
+        }@else {
+          &.is-padding-v-#{$key},&.op-padding-v-#{$key} {
+            padding-top: $value;
+            padding-bottom: $value;
+          }
+        }
+      }
+    } @else if $way == "side" {
+      @each $key, $value in $pattern-margin-size {
+        @if $key == "md" {
+          &.is-margin-s, &.op-margin-s,
+          &.is-margin-s-#{$key}, &.op-margin-s-#{$key} {
+            padding-left: $value;
+            padding-right: $value;
+          }
+        }@else {
+          &.is-padding-s-#{$key},&.op-padding-s-#{$key} {
+            padding-left: $value;
+            padding-right: $value;
+          }
+        }
+      }
+    } @else {
+      @each $key, $value in $pattern-margin-size {
+        @if $key == "md" {
+          &.is-padding-#{$way}, &.op-padding-#{$way},
+          &.is-padding-#{$way}-#{$key},&.op-padding-#{$way}-#{$key}  {
+            padding-#{$way}: $value;
+          }
+        } @else {
+          &.is-padding-#{$way}-#{$key},&.op-padding-#{$way}-#{$key} {
+            padding-#{$way}: $value;
+          }
+        }
+      }
+    }
+  }
+}
+
+//%ex-clear{
+//  //----------------------------------------------------
+//  // / clear
+//  //----------------------------------------------------
+//  &.is-reset {
+//    margin: 0;
+//  }
+//  &.is-centering {
+//    margin: 0 auto;
+//  }
+//  &.is-margin-right-auto {
+//    margin-right: auto;
+//  }
+//  &.is-margin-left-auto {
+//    margin-left: auto;
+//  }
+//}
+

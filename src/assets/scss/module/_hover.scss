@@ -1,0 +1,24 @@
+//----------------------------------------------------
+// Hover
+//----------------------------------------------------
+
+%ex-hover-anime{
+  &.is-opacity{
+    &:hover{
+      transition: all $hover-speed;
+      opacity: .7;
+    }
+  }
+  &.is-brightness-light{
+    &:hover {
+      filter: brightness(1.1);
+      transition: all $hover-speed;
+    }
+  }
+  &.is-brightness-dark{
+    &:hover {
+      filter: brightness(.9);
+      transition: all $hover-speed;
+    }
+  }
+}

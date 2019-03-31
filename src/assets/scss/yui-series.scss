@@ -2,25 +2,31 @@
 //----------------------------------------------------
 // / Import
 //----------------------------------------------------
+
+//----------------------------------------------------
+// / setting class
+//----------------------------------------------------
+
 @import "config/colors";
 @import "config/variable";
 @import "config/mixin";
 @import "config/extend";
 
 //module
+@import "module/color";
+@import "module/hover";
 @import "module/button";
 @import "module/flex";
+@import "module/space";
+@import "module/text";
 
-//----------------------------------------------------
-// / setting class
-//----------------------------------------------------
 
 // / button class
 //----------------------------------------------------
 
 $brandName:'yui';
 
-
+//button
 .#{$brandName}-btn{
   @extend %ex-btn;
 }
@@ -31,7 +37,6 @@ $brandName:'yui';
 .#{$brandName}-btn-plain{
   @extend %ex-btn;
   @extend %ex-btn-plain;
-  color: #FFF;
 }
 .#{$brandName}-btn-melt{
   @extend %ex-btn;
@@ -46,7 +51,30 @@ $brandName:'yui';
   @extend %ex-btn-outline;
 }
 
+//text
+.#{$brandName}-text-size{
+  @extend %ex-text-size;
+}
+//color
+.#{$brandName}-color{
+  @extend %ex-color;
+}
 
+//hover
+.#{$brandName}-hover{
+  @extend %ex-hover-anime;
+}
+
+//flex
+.#{$brandName}-l-flex{
+  @extend %ex-flex;
+}
+
+//space
+.#{$brandName}-space{
+  @extend %ex-margin;
+  @extend %ex-padding;
+}
 
 
 

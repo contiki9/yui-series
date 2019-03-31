@@ -12,6 +12,30 @@ $breakpoints: (
 
 
 //----------------------------------------------------
+// / Config - Text Size
+//----------------------------------------------------
+
+// Tap Size
+$text-size-xxl: 1.8rem !default;
+$text-size-xl: 1.5rem !default;
+$text-size-lg: 1.3rem !default;
+$text-size-md: 1rem !default;
+$text-size-sm: .9rem !default;
+$text-size-xs: .75rem !default;
+$text-size-xxs: .6rem !default;
+
+// Pattern - Text Size
+$pattern-text-size: (
+        xxl: $text-size-xxl,
+        xl: $text-size-xl,
+        lg: $text-size-lg,
+        md: $text-size-md,
+        sm: $text-size-sm,
+        xs: $text-size-xs,
+        xxs: $text-size-xxs
+) !default;
+
+//----------------------------------------------------
 // / Config - Button Color
 //----------------------------------------------------
 
@@ -67,4 +91,85 @@ $btn-ghost-disable-background-color: $light-8 !default;
 $btn-ghost-disable-border-color: $light-4 !default;
 $btn-ghost-disable-text-color: $light-4 !default;
 
+//----------------------------------------------------
+// / Config - Hover
+//----------------------------------------------------
 
+$hover-speed: .5s !default;
+$hover-opacity: .7 !default;
+$hover-brightness-light: 1.1 !default;
+$hover-brightness-dark: .9 !default;
+
+
+//----------------------------------------------------
+// / Layout - Margin
+//----------------------------------------------------
+
+$space-xxl:8*6px !default;
+$space-xl:8*5px !default;
+$space-lg:8*4px !default;
+$space-md:8*3px !default;
+$space-sm:8*2px !default;
+$space-xs:8px !default;
+$space-xxs:4px !default;
+
+// Margin Size
+$margin-size-xxl: $space-xxl !default;
+$margin-size-xl: $space-xl !default;
+$margin-size-lg: $space-lg !default;
+$margin-size-md: $space-md !default;
+$margin-size-sm: $space-sm !default;
+$margin-size-xs: $space-xs !default;
+$margin-size-xxs: $space-xxs !default;
+
+// Pattern - Margin Size
+$pattern-margin-size: (
+        xxl: $margin-size-xxl,
+        xl: $margin-size-xl,
+        lg: $margin-size-lg,
+        md: $margin-size-md,
+        sm: $margin-size-sm,
+        xs: $margin-size-xs,
+        xxs: $margin-size-xxs,
+        value7: $margin-size-xxl,
+        value6: $margin-size-xl,
+        value5: $margin-size-lg,
+        value4: $margin-size-md,
+        value3: $margin-size-sm,
+        value2: $margin-size-xs,
+        value1: $margin-size-xxs
+) !default;
+
+//----------------------------------------------------
+// / Layout - Padding
+//----------------------------------------------------
+
+// Padding Size
+$padding-size-xxl: $space-xxl !default;
+$padding-size-xl: $space-xl !default;
+$padding-size-lg: $space-lg !default;
+$padding-size-md: $space-md !default;
+$padding-size-sm: $space-sm !default;
+$padding-size-xs: $space-xs !default;
+$padding-size-xxs: $space-xxs !default;
+
+// Pattern - Padding Size
+$pattern-padding-size: (
+        xxl: $padding-size-xxl,
+        xl: $padding-size-xl,
+        lg: $padding-size-lg,
+        md: $padding-size-md,
+        sm: $padding-size-sm,
+        xs: $padding-size-xs,
+        xxs: $padding-size-xxs,
+        value7: $margin-size-xxl,
+        value6: $margin-size-xl,
+        value5: $margin-size-lg,
+        value4: $margin-size-md,
+        value3: $margin-size-sm,
+        value2: $margin-size-xs,
+        value1: $margin-size-xxs
+) !default;
+
+// Pattern - Way
+$pattern-space: all, top, right, bottom, left, vertical,side  !default;

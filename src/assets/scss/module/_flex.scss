@@ -1,9 +1,9 @@
 //----------------------------------------------------
-// / Basic Modifier
+// / Flex
 //----------------------------------------------------
 
 
-%ex-yui-flex{
+%ex-flex{
   @include flx-row;
   &.op-flx-row-reverse{
     @include flx-row-reverse;
