@@ -48,7 +48,7 @@ $brandName:'yui';
 }
 .#{$brandName}-btn-ghost{
   @extend %ex-btn;
-  @extend %ex-btn-outline;
+  @extend %ex-btn-ghost;
 }
 
 //text

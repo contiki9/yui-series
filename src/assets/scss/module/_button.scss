@@ -269,3 +269,35 @@
     color: $btn-disable-text-color;
   }
 }
+
+%ex-btn-ghost {
+  background-color: transparent;
+  border: $btn-border-width solid $btn-ghost-default-border-color;
+  color: $btn-ghost-default-text-color;
+  &:hover {
+    background-color: $btn-outline-default-hover-background-color;
+    color: $btn-ghost-default-hover-text-color;
+  }
+
+  @each $key, $value in $pattern-color-theme {
+    &.is-#{$key} {
+      border-color: $value;
+      color: $value;
+
+      &:hover {
+        background-color: $value;
+        border-color: transparent;
+        color: $light;
+      }
+    }
+  }
+
+  &.is-disabled,
+  &.is-disabled:hover,
+  &[disabled],
+  &[disabled]:hover {
+    background-color: $btn-disable-background-color-alpha;
+    border-color: $btn-disable-text-color;
+    color: $btn-disable-text-color;
+  }
+}
