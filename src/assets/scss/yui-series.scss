@@ -23,7 +23,6 @@ $brandName:'yui';
 
 .#{$brandName}-btn{
   @extend %ex-btn;
-  @extend %ex-btn-floating;
 }
 .#{$brandName}-btn-floating{
   @extend %ex-btn;
