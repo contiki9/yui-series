@@ -5,6 +5,9 @@
 
 %ex-flex{
   @include flx-row;
+  &.op-nowrap{
+    flex-wrap:nowrap;
+  }
   &.op-flx-row-reverse{
     @include flx-row-reverse;
   }
